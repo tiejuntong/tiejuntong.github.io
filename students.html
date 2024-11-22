@@ -1,0 +1,238 @@
+<html>
+
+  <head>
+
+    <title>
+
+    Students
+
+    </title>
+
+ <style type="text/css">
+
+
+
+a:link {color: red; text-decoration: none}
+
+a:visited {color: blue;text-decoration: none}
+
+a:hover {color: #FF00FF}
+
+
+
+a.two:link {color: red; text-decoration: none}
+
+a.two:visited {color: red;text-decoration: none}
+
+a.two:hover {color: #FF00FF}
+
+</style>
+
+
+<style type="text/css">
+
+.togList
+
+{
+
+font-family: verdana;
+
+}
+
+
+
+.togList dt
+
+{
+
+cursor: pointer; cursor: hand;
+
+}
+
+
+
+.togList dt span
+
+{
+
+size: 3;
+
+color: black;
+
+}
+
+
+
+.togList dd
+
+{
+
+width: 700px;
+
+padding-bottom: 15px;
+
+}
+
+ 								
+
+html.isJS .togList dd
+
+{
+
+display: none;
+
+}
+
+</style>
+
+<script type="text/javascript">
+
+
+
+/* Only set closed if JS-enabled */
+
+document.getElementsByTagName('html')[0].className = 'isJS';
+
+
+
+function tog(dt)
+
+{
+
+var display, dd=dt;
+
+/* get dd */
+
+do{ dd = dd.nextSibling } while(dd.tagName!='DD');
+
+toOpen =!dd.style.display;
+
+dd.style.display = toOpen? 'block':''
+
+dt.getElementsByTagName('span')[0].innerhtml = toOpen? '-':'+' ;
+}
+
+</script>
+</head>
+
+
+<p><font face="Comic Sans MS" size="3"><b>&nbsp;&nbsp;Current PhD Students</b>
+<a name="jpapers" id="jpapers"></a></font></p>
+<font face="Comic Sans MS" size="2">
+
+    <ol type="1" style="list-style-type: decimal;">
+
+      <li>
+    <a href="https://lao-ni.github.io/" target="_blank">Jingyi Ni</a>, 2022-present, PhD Student (Talent 100 PhD Scholarship Scheme), Department of Mathematics, HKBU
+    <br>Master in Statistics, University of New South Wales; BSc in Physics, ShanghaiTech University
+    <br><br></li>
+
+      <li>
+     Jiajin Wei, 2020-present, PhD Student, Department of Mathematics, HKBU
+    <br>MPhil in Statistics, Hong Kong Baptist University; BSc in Statistics, BNU-HKBU United International College
+    <br><br></li>
+</font>
+
+
+
+<script type="text/javascript">
+var reverse=document.getElementById('reverse_numbering_1');
+reverse.style.listStyle='none';
+var li=reverse.getElementsByTagName('li');
+for(var i=0; i<li.length; i++)
+{
+    li[i].insertBefore(document.createTextNode(li.length-i+'. '), li[i].firstChild);
+}
+</script>
+</ol>
+
+<p><font face="Comic Sans MS" size="3"><b>&nbsp;&nbsp;Past PhD Students</b>
+<a name="jpapers" id="jpapers"></a></font></p>
+<font face="Comic Sans MS" size="2">
+
+    <ol type="1" style="list-style-type: decimal;">
+
+      <li>
+    <a href="https://shi995832563.github.io/" target="_blank">Jiandong Shi</a>, 2018-2021, PhD in Statistics, Department of Mathematics, HKBU
+    <br>Current Position: Postdoctoral Fellow,  Department of Electronic and Computer Engineering, Hong Kong University of Science and Technology, Hong Kong
+    <br><br></li>
+
+      <li>
+    <a href="https://yangke18.github.io/" target="_blank">Ke Yang</a>, 2018-2021, PhD in Statistics, Department of Mathematics, HKBU
+    <br>Current Position: Assistant Professor, Department of Statistics and Data Science, Beijing University of Technology, Beijing, China
+    <br><br></li>
+
+      <li>
+     <a href="https://bdi.sztu.edu.cn/info/1067/2834.htm" target="_blank">Xiao Ke</a>, 2017-2020, PhD in Statistics, Department of Mathematics, HKBU (Joint with Professor Guoliang Tian from Southern University of Science and Technology)
+    <br> Current Position: Assistant Professor, College of Big Data and Internet, Shenzhen Technology University, Shenzhen, China
+    <br><br></li>
+
+      <li>
+     Wei Shen, 2016-2019, PhD in Operations Research, Department of Mathematics, HKBU (Joint with Professor Xiaoming Yuan from University of Hong Kong)
+     <br>Current Position: Assistant Professor, School of Statistics, Tianjin University of Finance and Economics, Tianjin, China
+    <br><br></li>
+
+      <li>
+     Enxuan Lin, 2016-2019, PhD in Statistics, Department of Mathematics, HKBU
+    <br>Current Position: Biostatistician, Innovent Biologics Co. Ltd., Beijing, China
+    <br><br></li>
+
+     <li>
+    <a href="https://zongliang_hu.gitee.io/homepage/" target="_blank">Zongliang Hu</a>, 2015-2018, PhD in Statistics, Department of Mathematics, HKBU
+    <br> Current Position: Assistant Professor, Department of Statistics, Shenzhen University, Shenzhen, China
+    <br><br></li>
+
+      <li>
+    <a href="https://www.math.hkbu.edu.hk/people/luo-dehui/index.html" target="_blank">Dehui Luo</a>, 2014-2017, PhD in Statistics, Department of Mathematics, HKBU
+    <br> Current Position: Lecturer and Director of the MSc Programme, Department of Mathematics, HKBU
+    <br><br></li>
+
+      <li>
+    Kai Dong, 2012-2015, PhD in Statistics, Department of Mathematics, HKBU
+    <br> Current Position: Data Analyst, China Daily Hong Kong Limited, Hong Kong
+    <br><br></li>
+
+      <li>
+    <a href="https://sites.google.com/view/wenlindai" target="_blank">Wenlin Dai</a>, 2011-2014, PhD in Statistics, Department of Mathematics, HKBU
+    <br> Current Position: Associate Professor, Institute of Statistics and Big Data, Renmin University of China, Beijing, China
+    <br><br></li>
+</font>
+
+
+<script type="text/javascript">
+var reverse=document.getElementById('reverse_numbering_1');
+reverse.style.listStyle='none';
+var li=reverse.getElementsByTagName('li');
+for(var i=0; i<li.length; i++)
+{
+    li[i].insertBefore(document.createTextNode(li.length-i+'. '), li[i].firstChild);
+}
+</script>
+</ol>
+
+<p><font face="Comic Sans MS" size="3"><b>&nbsp;&nbsp;Prospective PhD Students</b>
+<a name="jpapers" id="jpapers"></a></font></p>
+<font face="Comic Sans MS" size="2">
+
+    <ol type="1" style="list-style-type: decimal;">
+
+      If you enjoy doing <a href="https://www.math.hkbu.edu.hk/~tongt/journey.html" target="_blank">simple research</a> in particular in meta-analysis, then I might be the right person for you to work with in the next 4 years.
+      Nevertheless, when I say "doing simple research" (<i>but not naive research</i>), it should not be an excuse that you can be bad at math.
+      Ideally, I would expect that you can do some deep research, and meanwhile you are also able to present the paper in a simple way so that readers can readily follow.
+      Being a PhD student in the math department, math should be something you enjoy and are good at (like me, as evidenced by the following two pictures) — everything else you can learn thereafter.
+
+    <br><br><br>
+    <td align="left" valign="top"><img src="Journey/1991.jpg" alt="" width="750" height="600" border="1"></td>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <td align="left" valign="top"><img src="Journey/1994.jpg" alt="" width="425" height="600" border="1"></td>
+    <br><br><br></li>
+
+
+
+<br>
+<br>
+<br>
+
+</body>
+
+</html>
