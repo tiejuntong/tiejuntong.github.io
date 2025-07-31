@@ -96,35 +96,45 @@
     <mn>2</mn>
   </msubsup>
   </math>,
-  for quantifying the heterogeneity at the study population level (Yang et al., 2025). It ranges from 0 to 1, with higher value indicating greater heterogeneity between the studies. It is also not affected by the study sample sizes, and thus referred to as the <FONT COLOR="red">absolute measure of heterogeneity</FONT> between the studies.
+  for quantifying <FONT COLOR="blue">the heterogeneity at the study population level</FONT> (Yang et al., 2025). It ranges from 0 to 1, with higher values indicating greater heterogeneity between the studies. 
+  Additionally, 
+  <math>
+  <msubsup>
+    <mi>I</mi>
+    <mi>A</mi>
+    <mn>2</mn>
+  </msubsup>
+  </math>
+  is not influenced by the study sample sizes, making it <FONT COLOR="red">an absolute measure of heterogeneity</FONT> between the studies.
 
   <br><br>
-  In contrast, the
+  In contrast, the well-known 
   <math>
   <msup>
     <mi>I</mi>
     <mn>2</mn>
   </msup>
   </math>
-  statistic (Higgins and Thompson, 2002; Higgins et al., 2003) measures the heterogeneity between the observed effect sizes and is therefore highly dependent on the study sample sizes. A major limitation is that
+  statistic (Higgins and Thompson, 2002; Higgins et al., 2003) measures <FONT COLOR="blue">the heterogeneity between the observed effect sizes</FONT> and is therefore highly dependent on the study sample sizes. 
+  A major limitation of
   <math>
   <msup>
     <mi>I</mi>
     <mn>2</mn>
   </msup>
   </math>
-  increases rapidly toward 1 when the sample sizes become large, in a way we can also term it as the <FONT COLOR="red">relative measure of heterogeneity</FONT> between the studies.
+  is that it increases rapidly toward 1 when the sample sizes become large, making it <FONT COLOR="red">a relative measure of heterogeneity</FONT> between the studies.
 
 
   <br><br>
-  To facilitate implementation, depending on whether the <i>Q</i> or
+  To facilitate implementation, we offer two <b>Data Input</b> options as follows, depending on whether the <i>Q</i> or
   <math>
   <msup>
     <mi>I</mi>
     <mn>2</mn>
   </msup>
   </math>
-  statistic is already available at hand, we offer two different <b>Data Input</b> options as follows. Additionally, the online calculator can handle both the single-arm and two-arm studies, as well as the commonly used effect sizes for continuous outcomes including the mean difference (MD) and the standardized mean difference (SMD).
+  statistic is already available at hand. Additionally, this online calculator accommodates both single-arm and two-arm studies, and supports commonly used effect sizes for continuous outcomes, including the mean difference (MD) and the standardized mean difference (SMD).
 
   <br><br>
   <div class="section">
@@ -459,10 +469,8 @@ function calculateIA2FromSummary() {
   let IA2 = Math.max(numerator / denominator, 0);
   IA2 = Math.min(IA2, 1); // 防止超过 1
 
-  document.getElementById('output2').innerText = `Estimated I_A² = ${IA2.toFixed(6)}`;
+  document.getElementById('output2').innerText = `${IA2.toFixed(6)}`;
 }
-
-
 
     window.onload = function () {
     renderTable();
@@ -470,5 +478,9 @@ function calculateIA2FromSummary() {
    };
 
   </script>
+
+
+<br><br>
 </body>
 </html>
+
