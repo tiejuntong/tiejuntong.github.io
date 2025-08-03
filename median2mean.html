@@ -355,29 +355,121 @@
           border-collapse:collapse;
         }
 
+    .main-container {
+      font-family: Arial, sans-serif;
+      width: 86.6667vw;
+      max-width: 1500px;
+      margin: 0 auto;          /* 整个容器水平居中 */
+      padding: 20px;
+    }
+
+    .section {
+      margin-bottom: 20px;
+      text-align: left;        /* 内容左对齐 */
+    }
+
+    #twoGroupOptions {
+      margin-left: 20px;
+      padding-left: 15px;
+      border-left: 2px solid #aaa;
+      margin-top: 5px;
+      margin-bottom: 15px;
+    }
+    #twoGroupOptions2 {
+      margin-left: 20px;
+      padding-left: 15px;
+      border-left: 2px solid #aaa;
+      margin-top: 5px;
+      margin-bottom: 15px;
+    }
+    label {
+      margin-right: 15px;
+    }
+  .custom-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .custom-table th,
+  .custom-table td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: center;
+  }
+
+    input[type="number"] {
+      width: 80px;
+    }
+    .result-box {
+      display: flex;
+      align-items: center;
+      margin-top: 15px;
+    }
+    .output {
+      border: 1px solid #ccc;
+      padding: 5px 10px;
+      margin-right: 10px;
+      width: 150px;
+    }
+    .link {
+      color: red;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+    .button {
+      background-color: #ddd;
+      color: #003366;
+      padding: 5px 10px;
+      margin-right: 10px;
+      border: none;
+      cursor: pointer;
+    }
+    #output, #output2 {
+      border: 1px solid #000;
+      padding: 6px 12px;
+      font-weight: bold;
+      font-family: Arial, sans-serif;
+      min-width: 120px;
+      text-align: center;
+      font-size: 15px;
+      height: 16px;
+    }
+
 
         </style>
 
           </head>
           <body>
           <div align="center">
-          <h2 style = "color:black;font-family:verdana;">Estimating the sample mean and standard deviation (SD) from the five-number summary and its application in meta-analysis</h2>
+          <h2 style = "color:black;font-family:verdana;">Estimating the sample mean and standard deviation (SD) from the five-number summary</h2>
 
-          <h4 style = "color:grey;font-family:verdana;">-- maintained by <a href="https://tiejuntong.github.io/">Tiejun Tong</a></h4>
-            
+          <h4 style = "color:grey;font-family:verdana;">-- maintained by <a href="https://www.math.hkbu.edu.hk/~tongt/">Tiejun Tong</a></h4>
+
+          <blockquote>
           <br>
-          <script type="text/javascript">
-          document.write("<b>Step 1</b>: Find the proper scenario for the given summary data (e.g., choose <span style='color:blue;'>Scenario 1</span> if the reported five-number summary consists of the sample minimum, median and maximum).    <br> <b>Step 2</b>: Input the sample size and the five-number summary into the corresponding entries of each scenario (e.g., Size = 100, Minimum = 11, Median = 18, Maximum = 29).    <br> <b>Step 3</b>: Click the '<span style='color:blue;'>Detect the skewness</span>' button to check whether or not the data are significantly skewed away from normality by <span style='color:red;'>Shi et al. (2023)</span>. <br> <b>Step 4</b>: If the data are NOT significantly skewed (otherwise, go to <b>Step 5</b>), then click the '<span style='color:blue;'>Calculate</span>' button to get the estimates of the sample mean and SD according to the optimal methods from the specified papers. <br> <b>Step 5</b>: If the data are significantly skewed, then we recommend to follow the <i>flow chart</i> at the bottom of the online calculator, where a few options are suggested to better handle the summary data at hand.")
-        </script>
-
+          <div class="section">
+          <b>Step 1</b>: Identify the appropriate scenario for the given summary data (for example, select <span style='color:blue;'>Scenario 1</span> if the reported five-number summary includes the sample minimum, median, and maximum).
 
           <br>
+          <b>Step 2</b>: Input the sample size and the five-number summary into the corresponding entries of each scenario (for example, enter Size = 100, Minimum = 11, Median = 18, and Maximum = 29).
+
+          <br>
+          <b>Step 3</b>: Click the '<span style='color:blue;'>Detect the skewness</span>' button to test whether the data show significant skewness from normality, according to <span style='color:red;'>Shi et al. (2023)</span>.
+
+          <br>
+          <b>Step 4</b>: If the data are NOT significantly skewed (otherwise, move to <i>Step 5</i>), click the '<span style='color:blue;'>Calculate</span>' button to obtain the sample mean and SD estimates using the optimal methods from <span style='color:red;'>Wan et al. (2014)</span>, <span style='color:red;'>Luo et al. (2018)</span>, and <span style='color:red;'>Shi et al. (2020)</span>.  
+
+          <br>
+          <b>Step 5</b>: If the data are significantly skewed, we recommend using the proposed flow chart to guide your analysis. The flow chart also introduces a new measure for quantifying heterogeneity in meta-analysis (<span style='color:red;'>Yang et al., 2025</span>).
+          </blockquote>
+
           <noscript>For full functionality of this page it is necessary to enable JavaScript. Here are the <a href="http://www.enable-javascript.com" target="_blank" style="font-size: 20px;"> instructions how to enable JavaScript in your web browser</a></noscript>
 
+          
           <br>
-          <div align="center" style="height:0px;border-bottom:solid 1px #cccccc;margin-top:15px;margin-bottom:15px;"></div>
           <h3 style = "color:blue;font-family:verdana;">Scenario 1</h3>
-
           <div align="left" style="margin-top:5px;margin-bottom:25px;margin-left:5px;width:450px;">
           <form name="enter">
           <p style="line-height:125%;margin:0px;margin-bottom:3px;"><input type="Text" size="8" class="initial3">&nbsp;&nbsp;Size of the sample</p>
@@ -393,7 +485,6 @@
           <div align="left" style="margin-top:5px;margin-bottom:10px;margin-left:5px;width:500px;"><a class="btn" href="javascript:wipe1()">&nbsp;&nbsp;&nbsp;Reset&nbsp;&nbsp;&nbsp;</a>&nbsp;&nbsp;&nbsp;<a class="btn" href="javascript:nt1()">&nbsp;&nbsp;&nbsp;Detect the skewness&nbsp;&nbsp;&nbsp;</a>&nbsp;&nbsp;&nbsp;<a class="btn" href="javascript:calc1()">&nbsp;&nbsp;&nbsp;Calculate&nbsp;&nbsp;&nbsp;</a></div>
 
           <div align="center" style="height:0px;border-bottom:solid 1px #cccccc;margin-top:20px;margin-bottom:15px;"></div>
-
           </div>
 
 
@@ -405,7 +496,7 @@
           </div>
 
 
-          <div align="center" style="height:0px;border-bottom:solid 1px #cccccc;margin-top:15px;margin-bottom:15px;"></div>
+          <br>
           <h3 style = "color:blue;font-family:verdana;">Scenario 2</h3>
           <div align="left" style="margin-top:5px;margin-bottom:25px;margin-left:5px;width:450px;">
           <form name="enter2">
@@ -435,7 +526,7 @@
           </div>
 
 
-          <div align="center" style="height:0px;border-bottom:solid 1px #cccccc;margin-top:15px;margin-bottom:15px;"></div>
+          <br>
           <h3 style = "color:blue;font-family:verdana;">Scenario 3 </h3>
 
           <div align="left" style="margin-top:5px;margin-bottom:25px;margin-left:5px;width:450px;">
@@ -468,46 +559,229 @@
           </form>
           </div>
 
-          <div align="center" style="height:0px;border-bottom:solid 1px #cccccc;margin-top:20px;margin-bottom:15px;"></div>
-          <span style="font-size: 100%;">
-          <h2 style = "color:black;font-family:verdana;">References: </h2>
 
           <blockquote>
+          <br>
+          <div align="left">
+          <h2 style = "color:black;font-family:verdana;">References:</h2>
 
           <div align="left">
           J. Shi, D. Luo, X. Wan, Y. Liu, J. Liu, Z. Bian and T. Tong (2023), "<a href="http://www.math.hkbu.edu.hk/~tongt/papers/SMMR2023.pdf" target="_blank">Detecting the skewness of data from the five-number summary and its application in meta-analysis</a>", <i>Statistical Methods in Medical Research</i>,  <b>32</b>: 1338-1360.
-        </div>
+          </div>
           <br>
 
           <div align="left">
           J. Shi, D. Luo, H. Weng, X. Zeng, L. Lin, H. Chu and T. Tong (2020), "<a href="http://www.math.hkbu.edu.hk/~tongt/papers/RSM2020.pdf" target="_blank">Optimally estimating the sample standard deviation from the five-number summary</a>", <i>Research Synthesis Methods</i>, <b>11</b>: 641-654.
-        </div>
+          </div>
           <br>
 
           <div align="left">
           D. Luo, X. Wan, J. Liu and T. Tong (2018), "<a href="http://www.math.hkbu.edu.hk/~tongt/papers/SMMR2018.pdf" target="_blank">Optimally estimating the sample mean from the sample size, median, mid-range and/or mid-quartile range</a>", <i>Statistical Methods in Medical Research</i>, <b>27</b>: 1785-1805.
-        </div>
+          </div>
           <br>
 
           <div align="left">
           X. Wan, W. Wang, J. Liu and T. Tong (2014), "<a href="http://www.math.hkbu.edu.hk/~tongt/papers/BMC_MRM2014.pdf" target="_blank">Estimating the sample mean and standard deviation from the sample size, median, range and/or interquartile range</a>", <i>BMC Medical Research Methodology</i>, <b>14</b>: 135.
-        </div>
+          </div>
           <br>
+          </blockquote>
 
 
-          <div align="center" style="height:0px;border-bottom:solid 1px #cccccc;margin-top:15px;margin-bottom:15px;"></div>
+          <blockquote>
           <br>
+          <div align="center" style="height:0px;border-bottom:solid 2px #cccccc;margin-top:15px;margin-bottom:15px;"></div>
           <br>
-          <h2 style = "color:black;font-family:verdana;">A flow chart for performing meta-analysis when some studies are reported with the whole or part of the five-number summary</h2>
+          <h2 style = "color:black;font-family:verdana;">A flow chart for meta-analysis when some studies are reported with the five-number summary</h2>
           <br>
-          <img src="flowchart.png" alt="Flow chart for meta-analysis" width="600" height="500">
+          <img src="flowchart.jpg" alt="Flow chart for meta-analysis" width="600" height="600">
 
           </blockquote>
-          </span>
+
+
+          <blockquote>
+          <br>
+          <div align="center" style="height:0px;border-bottom:solid 2px #cccccc;margin-top:15px;margin-bottom:15px;"></div>
+          <br>
+          <h2 style = "color:black;font-family:verdana;">Computing the absolute measure of heterogeneity in meta-analysis</h2>
+
+          <h4 style = "color:grey;font-family:verdana;">-- maintained by <a href="https://www.math.hkbu.edu.hk/~tongt/">Tiejun Tong</a></h4>
+          </blockquote>
+
+  <blockquote>
+  <br>
+  <div class="section">
+  This online calculator computes the new measure of heterogeneity,
+  <math>
+  <msubsup>
+    <mi>I</mi>
+    <mi>A</mi>
+    <mn>2</mn>
+  </msubsup>
+  </math>,
+  for quantifying <FONT COLOR="blue">the heterogeneity at the study population level</FONT> (Yang et al., 2025). It ranges from 0 to 1, with higher values indicating greater heterogeneity between the studies.
+  Moreover,
+  <math>
+  <msubsup>
+    <mi>I</mi>
+    <mi>A</mi>
+    <mn>2</mn>
+  </msubsup>
+  </math>
+  is not influenced by the study sample sizes, making it <FONT COLOR="red">an absolute measure of heterogeneity</FONT> between the studies.
+
+  <br><br>
+  In contrast, the well-known
+  <math>
+  <msup>
+    <mi>I</mi>
+    <mn>2</mn>
+  </msup>
+  </math>
+  statistic (Higgins and Thompson, 2002; Higgins et al., 2003) measures <FONT COLOR="blue">the heterogeneity between the observed effect sizes</FONT> and is therefore highly dependent on the study sample sizes.
+  A major limitation of
+  <math>
+  <msup>
+    <mi>I</mi>
+    <mn>2</mn>
+  </msup>
+  </math>
+  is that it increases rapidly toward 1 when the sample sizes become large, making it <FONT COLOR="red">a relative measure of heterogeneity</FONT> between the studies.
+
+
+  <br><br>
+  To facilitate implementation, we offer two <b>Data Input</b> options as follows, depending on whether the <i>Q</i> or
+  <math>
+  <msup>
+    <mi>I</mi>
+    <mn>2</mn>
+  </msup>
+  </math>
+  statistic is already available. This online calculator accommodates both single-arm and two-arm studies and supports commonly used effect sizes for continuous outcomes, including the mean difference (MD) and the standardized mean difference (SMD).
+  </blockquote>
+
+
+  <br>
+  <blockquote>
+  <h3 style = "color:blue;font-family:verdana;">Option 1: Individual-level input</h3>
+  <div class="section">
+    <label for="studyNumber">Number of studies:</label>
+    <input type="number" id="studyNumber" min="1" value="3" onchange="renderTable()">
+  </div>
+
+  <div class="section">
+    <label><input type="radio" name="analysisType" value="twoGroup" checked> Meta-analysis of <b>two-arm studies</b></label>
+    <label><input type="radio" name="analysisType" value="individual"> Meta-analysis of <b>single-arm studies</b></label>
+
+    <div id="twoGroupOptions">
+      <label><input type="radio" name="effectType" value="smd" checked> Standardized Mean Difference</label><br>
+      <label><input type="radio" name="effectType" value="md"> Mean Difference</label>
+    </div>
+  </div>
+
+  <div class="section" id="tableSection"></div>
+
+ <div align="center" style="margin-top: 5px; margin-bottom: 10px; margin-left: 5px; width: 500px;">
+  <a class="btn" href="javascript:resetTable()">&nbsp;&nbsp;&nbsp;Reset&nbsp;&nbsp;&nbsp;</a>
+  &nbsp;&nbsp;&nbsp;
+  <a class="btn" href="javascript:calculateIA2()">&nbsp;&nbsp;&nbsp;Calculate&nbsp;&nbsp;&nbsp;</a>
+</div>
+
+  <div class="section result-box" style="display: flex; justify-content: center; align-items: center; gap: 8px; margin-top: 10px;">
+    <div id="output"></div>
+    <div>
+  Absolute measure of heterogeneity
+  <math>
+  <msubsup>
+    <mi>I</mi>
+    <mi>A</mi>
+    <mn>2</mn>
+  </msubsup>
+  </math>
+  from <FONT COLOR="red">Yang et al. (2025)</FONT>
+    </div>
+  </div>
+  </blockquote>
+
+
+  <blockquote>
+  <br>
+  <h3 style = "color:blue;font-family:verdana;">Option 2: Aggregate-level input</h3>
+  <div class="section">
+  <label for="studyNumber2">Cochrane's <i>Q</i>:</label> <input type="number" id="inputQ"></label>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;or&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <label for="studyNumber2">
+  Higgins'
+  <math>
+  <msup>
+    <mi>I</mi>
+    <mn>2</mn>
+  </msup>
+  </math>:</label> <input type="number" id="inputI2">
+  <br><br>
+  <label for="studyNumber2">Number of studies:</label>  <input type="number" id="studyNumber2" min="1" value="3" onchange="renderTable2()">
+  </div>
+
+  <div class="section">
+    <label><input type="radio" name="analysisType2" value="twoGroup" checked> Meta-analysis of <b>two-arm studies</b></label>
+    <label><input type="radio" name="analysisType2" value="individual"> Meta-analysis of <b>single-arm studies</b></label>
+  </div>
+
+<div class="section" id="tableSection2"></div>
+
+
+ <div align="center" style="margin-top: 5px; margin-bottom: 10px; margin-left: 5px; width: 500px;">
+  <a class="btn" href="javascript:resetTable2()">&nbsp;&nbsp;&nbsp;Reset&nbsp;&nbsp;&nbsp;</a>
+  &nbsp;&nbsp;&nbsp;
+  <a class="btn" href="javascript:calculateIA2FromSummary()">&nbsp;&nbsp;&nbsp;Calculate&nbsp;&nbsp;&nbsp;</a>
+</div>
+
+   <div class="section result-box" style="display: flex; justify-content: center; align-items: center; gap: 8px; margin-top: 10px;">
+    <div id="output2"></div>
+    <div>
+  Absolute measure of heterogeneity
+  <math>
+  <msubsup>
+    <mi>I</mi>
+    <mi>A</mi>
+    <mn>2</mn>
+  </msubsup>
+  </math>
+   from <FONT COLOR="red">Yang et al. (2025)</FONT>
+    </div>
+  </div>
+  </blockquote>
+
+
+          <blockquote>
+          <br>
+          <div align="left">
+          <h2 style = "color:black;font-family:verdana;">References:</h2>
+
+          <div align="left">
+          K. Yang, E. Lin, W. Xu, L. Zhu and T. Tong (2025), "<a href="https://onlinelibrary.wiley.com/doi/full/10.1002/sim.70089" target="_blank">An alternative measure for quantifying the heterogeneity in meta-analysis</a>", <i>Statistics in Medicine</i>,  <b>44</b>: e70089.
+          </div>
+          <br>
+
+          <div align="left">
+          J. P. Higgins, S. G. Thompson, J. J. Deeks and D. G. Altman (2003), "<a href="https://www.bmj.com/content/327/7414/557" target="_blank">Measuring inconsistency in meta-analyses</a>", <i>British Medical Journal</i>, <b>327</b>: 557-560.
+          </div>
+          <br>
+
+          <div align="left">
+          J. P. Higgins and S. G. Thompson (2002), "<a href="https://onlinelibrary.wiley.com/doi/10.1002/sim.1186" target="_blank">Quantifying heterogeneity in a meta-analysis</a>", <i>Statistics in Medicine</i>, <b>21</b>: 1539-1558.
+          </div>
+          <br>
+          </div>
+          </blockquote>
+
+
+
+  <div id="intermediateResults" style="margin-top:20px; font-family: monospace; white-space: pre-wrap;"></div>
 
           <br>
           <br>
           <br>
+<div align="center">
           <!-- hitwebcounter Code START -->
           <a href="http://www.hitwebcounter.com" target="_blank">
           <img src="http://hitwebcounter.com/counter/counter.php?page=7051825&style=0011&nbdigits=6&type=page&initCount=3500" title="Must See Places In Paris" Alt="Must See Places In Paris"   border="0" >
@@ -518,4 +792,244 @@
           </a>
           <br>
           <br>
+</div>  </div>
+  <script>
+    function renderTable() {
+      const n = parseInt(document.getElementById('studyNumber').value);
+      renderTableWithStudyNumber(n);
+    }
+
+    function renderTableWithStudyNumber(n) {
+      const analysisType = document.querySelector('input[name="analysisType"]:checked').value;
+
+      let html = '<table class="custom-table"><tr><th>Study ID</th>';
+      if (analysisType === 'twoGroup') {
+        html += '<th colspan="3">Experimental Group</th><th colspan="3">Control Group</th>';
+      } else {
+        html += '<th>Estimated Mean</th><th>Standard Error</th><th>Number of Observations</th>';
+      }
+      html += '</tr>';
+
+      if (analysisType === 'twoGroup') {
+        html += '<tr><td></td>';
+        for (let i = 0; i < 2; i++) {
+          html += '<td>Estimated Mean</td><td>Standard Error</td><td>Number of Observations</td>';
+        }
+        html += '</tr>';
+      }
+
+      for (let i = 0; i < n; i++) {
+        html += `<tr><td>${i + 1}</td>`;
+        const cols = (analysisType === 'twoGroup') ? 6 : 3;
+        for (let j = 0; j < cols; j++) {
+          html += `<td><input type="number" step="any" id="cell_${i}_${j}"></td>`;
+        }
+        html += '</tr>';
+      }
+      html += '</table>';
+      document.getElementById('tableSection').innerHTML = html;
+    }
+
+    function resetTable() {
+      document.getElementById('studyNumber').value = 3;
+      renderTable();
+      document.getElementById('output').innerText = '';
+    }
+
+    document.querySelectorAll('input[name="analysisType"]').forEach(radio => {
+      radio.addEventListener('change', () => {
+        const show = document.querySelector('input[name="analysisType"]:checked').value === 'twoGroup';
+        document.getElementById('twoGroupOptions').style.display = show ? 'block' : 'none';
+
+        const currentN = parseInt(document.getElementById('studyNumber').value);
+        renderTableWithStudyNumber(currentN);
+      });
+    });
+
+    function calculateIA2() {
+      const k = parseInt(document.getElementById('studyNumber').value);
+      const type = document.querySelector('input[name="analysisType"]:checked').value;
+      const effect = document.querySelector('input[name="effectType"]:checked')?.value;
+
+      let y = [], w = [], n = [];
+
+      for (let i = 0; i < k; i++) {
+        if (type === 'individual') {
+          const yi = parseFloat(document.getElementById(`cell_${i}_0`).value);
+          const sdi = parseFloat(document.getElementById(`cell_${i}_1`).value);
+          const ni = parseFloat(document.getElementById(`cell_${i}_2`).value);
+          y.push(yi);
+          w.push(1 / (sdi * sdi));
+          n.push(ni);
+        } else {
+          const m1 = parseFloat(document.getElementById(`cell_${i}_0`).value);
+          const sd1 = parseFloat(document.getElementById(`cell_${i}_1`).value);
+          const n1 = parseFloat(document.getElementById(`cell_${i}_2`).value);
+          const m2 = parseFloat(document.getElementById(`cell_${i}_3`).value);
+          const sd2 = parseFloat(document.getElementById(`cell_${i}_4`).value);
+          const n2 = parseFloat(document.getElementById(`cell_${i}_5`).value);
+          const md = m1 - m2;
+          if (effect === 'smd') {
+            const df = n1 + n2 - 2;
+            const J = 1 - 3 / (4 * df - 1);  // Hedges' correction
+            const pooledSD = Math.sqrt(((n1 - 1) * n1 * sd1 ** 2 + (n2 - 1) * n2 * sd2 ** 2) / df);
+            const smd = J * md / pooledSD;
+            y.push(smd);
+            const se = Math.sqrt((n1 + n2) / (n1 * n2) + (smd ** 2) / (2 * (n1 + n2)));
+            w.push(1 / (se ** 2));
+            n.push(n1 * n2 / (n1 + n2));
+          } else {
+            y.push(md);
+            const se2 = sd1 ** 2 + sd2 ** 2;
+            w.push(1 / se2);
+            n.push(1 / (1 / n1 + 1 / n2));
+          }
+        }
+      }
+
+      const wy = y.map((yi, i) => w[i] * yi);
+      const sumW = w.reduce((a, b) => a + b, 0);
+      const meanWY = wy.reduce((a, b) => a + b, 0) / sumW;
+      const Q = w.reduce((acc, wi, i) => acc + wi * (y[i] - meanWY) ** 2, 0);
+      const sumW2 = w.reduce((acc, wi) => acc + wi ** 2, 0);
+      const wt = (sumW - sumW2 / sumW) / (k - 1);
+
+      const sumN = n.reduce((a, b) => a + b, 0);
+      const sumN2 = n.reduce((a, b) => a + b ** 2, 0);
+      let nt = (sumN - sumN2 / sumN) / (k - 1);
+
+      if (effect === 'smd' && type === 'twoGroup') {
+          nt = wt;
+       }
+
+      const denom = Q + (k - 1) * (nt - 1);
+      const IA2 = Math.max((Q - (k - 1)) / denom, 0);
+      document.getElementById('output').innerText = `${IA2.toFixed(6)}`;
+
+    }
+
+    function renderTable2() {
+      const n = parseInt(document.getElementById('studyNumber2').value);
+      renderTableWithStudyNumber2(n);
+    }
+
+    function renderTableWithStudyNumber2(n) {
+      const analysisType = document.querySelector('input[name="analysisType2"]:checked').value;
+
+      let html = '<table class="custom-table"><tr><th>Study ID</th>';
+      if (analysisType === 'twoGroup') {
+        html += '<th colspan="1">Experimental Group</th><th colspan="1">Control Group</th>';
+      } else {
+        html += '<th>Number of Observations</th>';
+      }
+      html += '</tr>';
+
+      if (analysisType === 'twoGroup') {
+        html += '<tr><td></td>';
+        for (let i = 0; i < 2; i++) {
+          html += '<td>Number of Observations</td>';
+        }
+        html += '</tr>';
+      }
+
+      for (let i = 0; i < n; i++) {
+        html += `<tr><td>${i + 1}</td>`;
+        const cols = (analysisType === 'twoGroup') ? 2 : 1;
+        for (let j = 0; j < cols; j++) {
+          html += `<td><input type="number" step="any" id="cell2_${i}_${j}"></td>`;
+        }
+        html += '</tr>';
+      }
+      html += '</table>';
+      document.getElementById('tableSection2').innerHTML = html;
+    }
+
+    function resetTable2() {
+      document.getElementById('studyNumber2').value = 3;
+      renderTable2();
+      document.getElementById('output2').innerText = '';
+    }
+
+    document.querySelectorAll('input[name="analysisType2"]').forEach(radio => {
+      radio.addEventListener('change', () => {
+        const show = document.querySelector('input[name="analysisType2"]:checked').value === 'twoGroup';
+
+        const currentN = parseInt(document.getElementById('studyNumber2').value);
+        renderTableWithStudyNumber2(currentN);
+      });
+    });
+
+function calculateIA2FromSummary() {
+  const k = parseInt(document.getElementById('studyNumber2').value);
+  const type = document.querySelector('input[name="analysisType2"]:checked').value;
+
+  if (!k || k < 2) {
+    document.getElementById('output2').innerText = 'Invalid number of studies.';
+    return;
+  }
+
+  // 读取样本量并计算每项的 n 值
+  let nList = [];
+  for (let i = 0; i < k; i++) {
+    if (type === 'individual') {
+      const cell = document.getElementById(`cell2_${i}_0`);
+      const n = parseFloat(cell?.value);
+      if (isNaN(n) || n <= 0) {
+        document.getElementById('output2').innerText = `Invalid input at row ${i + 1}.`;
+        return;
+      }
+      nList.push(n);
+    } else if (type === 'twoGroup') {
+      const cell1 = document.getElementById(`cell2_${i}_0`);
+      const cell2 = document.getElementById(`cell2_${i}_1`);
+      const n1 = parseFloat(cell1?.value);
+      const n2 = parseFloat(cell2?.value);
+      if (isNaN(n1) || isNaN(n2) || n1 <= 0 || n2 <= 0) {
+        document.getElementById('output2').innerText = `Invalid input at row ${i + 1}.`;
+        return;
+      }
+      const n = 1 / (1 / n1 + 1 / n2);
+      nList.push(n);
+    }
+  }
+
+  // 计算 nt
+  const sumN = nList.reduce((a, b) => a + b, 0);
+  const sumN2 = nList.reduce((a, b) => a + b * b, 0);
+  const nt = (sumN - sumN2 / sumN) / (k - 1);
+
+  // 获取 Q 或 I²
+  const Q_input = parseFloat(document.getElementById('inputQ').value);
+  const I2_input = parseFloat(document.getElementById('inputI2').value);
+  let Q = null;
+
+  if (!isNaN(Q_input)) {
+    Q = Q_input;
+  } else if (!isNaN(I2_input)) {
+    const I2 = I2_input;
+    if (I2 >= 1) {
+      document.getElementById('output2').innerText = 'I² must be less than 1.';
+      return;
+    }
+    Q = (k - 1) / (1 - I2);
+  } else {
+    document.getElementById('output2').innerText = 'Please enter Q or I².';
+    return;
+  }
+
+  // 计算 I_A²
+  const numerator = Q - (k - 1);
+  const denominator = Q + (k - 1) * (nt - 1);
+  let IA2 = Math.max(numerator / denominator, 0);
+  IA2 = Math.min(IA2, 1); // 防止超过 1
+
+  document.getElementById('output2').innerText = `${IA2.toFixed(6)}`;
+}
+
+    window.onload = function () {
+    renderTable();
+    renderTable2();
+   };
+
+  </script>
           </body></html> 
