@@ -14,6 +14,12 @@
     h2 {
       text-align: center;
     }
+    h3 {
+      text-align: center;
+    }
+    h4 {
+      text-align: center;
+    }
     #twoGroupOptions {
       margin-left: 20px;
       padding-left: 15px;
@@ -80,12 +86,52 @@
       font-size: 15px;
       height: 16px;
     }
+       a.btn {
+          padding:2px;
+          padding-left:6px;
+          padding-right:6px;
+          background-color:#F7F7F7;
+            -moz-border-radius:6px;
+          -webkit-border-radius:6px;
+          border-radius:6px;
+
+          font-family:Trebuchet MS;
+          font-size:16px;
+          font-weight:600;
+          color:#333399;
+            border:solid 1px #cccccc;
+          border-bottom-width:2px;
+          border-right-width:2px;
+          margin-top:10px;
+          text-decoration:none;
+          cursor:pointer;
+          background-image:url(gradient.jpg);
+          text-align:center;
+          text-shadow:1px 1px 0px #ffffff;
+        }
+        a.btn:visited {
+          text-decoration:none;
+        }
+
+        a.btn:hover {
+          color:red;
+          text-decoration:none;
+          background-color:#eeeeee;
+            border-bottom-color:#A8A8A8 ;
+            border-right-color:#A8A8A8 ;
+            background-image:url(gradient2.jpg);
+        }
+
+        a.btn:active {
+          text-decoration:none;
+        }
   </style>
 </head>
 
 <body>
-  <h2>Computing the absolute measure of heterogeneity in meta-analysis</h2>
+       <h2 style = "color:black;font-family:verdana;">Computing the absolute measure of heterogeneity in meta-analysis</h2>
 
+      <h4 style = "color:grey;font-family:verdana;">-- maintained by <a href="https://www.math.hkbu.edu.hk/~tongt/">Tiejun Tong</a></h4>
   <br>
   <div class="section">
   This online calculator computes the new measure of heterogeneity,
@@ -127,18 +173,18 @@
 
 
   <br><br>
-  To facilitate implementation, we offer two <b>Data Input</b> options as follows, depending on whether the <i>Q</i> or
+   To facilitate implementation, we offer two <b>Data Input</b> options as follows, depending on whether the <i>Q</i> or
   <math>
   <msup>
     <mi>I</mi>
     <mn>2</mn>
   </msup>
   </math>
-  statistic is already available at hand. Additionally, this online calculator accommodates both single-arm and two-arm studies, and supports commonly used effect sizes for continuous outcomes, including the mean difference (MD) and the standardized mean difference (SMD).
+  statistic is already available. This online calculator accommodates both single-arm and two-arm studies and supports commonly used effect sizes for continuous outcomes, including the mean difference (MD) and the standardized mean difference (SMD).
 
   <br><br>
   <div class="section">
-    <h3 style="color: red; font-weight: bold; margin-bottom: 8px;">Option 1: Individual-level input</h3>
+    <h3 style="color: blue; font-weight: bold; margin-bottom: 8px;">Option 1: Individual-level input</h3>
     <br>
     <label for="studyNumber">Number of studies:</label>
     <input type="number" id="studyNumber" min="1" value="3" onchange="renderTable()">
@@ -156,12 +202,13 @@
 
   <div class="section" id="tableSection"></div>
 
-  <div class="section">
-    <button class="button" onclick="resetTable()">Reset</button>
-    <button class="button" onclick="calculateIA2()">Calculate</button>
-  </div>
+<div style="margin: 5px auto 10px auto; width: 500px; text-align: center;">
+  <a class="btn" href="javascript:resetTable()">&nbsp;&nbsp;&nbsp;Reset&nbsp;&nbsp;&nbsp;</a>
+  &nbsp;&nbsp;&nbsp;
+  <a class="btn" href="javascript:calculateIA2()">&nbsp;&nbsp;&nbsp;Calculate&nbsp;&nbsp;&nbsp;</a>
+</div>
 
-  <div class="section result-box" style="display: flex; align-items: center; gap: 8px;">
+  <div class="section result-box" style="display: flex; justify-content: center; align-items: center; gap: 8px; margin-top: 10px;">
     <div id="output"></div>
     <div>
   Absolute measure of heterogeneity
@@ -179,7 +226,7 @@
 
   <br>
   <div class="section">
-  <h3 style="color: red; font-weight: bold; margin-bottom: 8px;">Option 2: Aggregate-level input</h3>
+  <h3 style="color: blue; font-weight: bold; margin-bottom: 8px;">Option 2: Aggregate-level input</h3>
   <br>
   <label for="studyNumber2">Cochrane's <i>Q</i>:</label> <input type="number" id="inputQ"></label>
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;or&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -202,12 +249,13 @@
 
 <div class="section" id="tableSection2"></div>
 
-<div class="section">
-  <button class="button" onclick="resetTable2()">Reset</button>
-  <button class="button" onclick="calculateIA2FromSummary()">Calculate</button>
+<div style="margin: 5px auto 10px auto; width: 500px; text-align: center;">
+  <a class="btn" href="javascript:resetTable2()">&nbsp;&nbsp;&nbsp;Reset&nbsp;&nbsp;&nbsp;</a>
+  &nbsp;&nbsp;&nbsp;
+  <a class="btn" href="javascript:calculateIA2FromSummary()">&nbsp;&nbsp;&nbsp;Calculate&nbsp;&nbsp;&nbsp;</a>
 </div>
 
-   <div class="section result-box" style="display: flex; align-items: center; gap: 8px;">
+    <div class="section result-box" style="display: flex; justify-content: center; align-items: center; gap: 8px; margin-top: 10px;">
     <div id="output2"></div>
     <div>
   Absolute measure of heterogeneity
@@ -222,11 +270,10 @@
     </div>
   </div>
 
-
-  <br>
+<br>
   <div class="section" id="ref">
-    <p><b>References:</b>
-      <br><br>
+<h2 style="color:black; font-family:verdana; text-align:left;">References:</h2>
+
       K. Yang, E. Lin, W. Xu, L. Zhu and T. Tong (2025), "<a href="https://onlinelibrary.wiley.com/doi/full/10.1002/sim.70089" target="_blank">An alternative measure for quantifying the heterogeneity in meta-analysis</a>", <i>Statistics in Medicine</i>, <b>44</b>: e70089.
 
       <br><br>
